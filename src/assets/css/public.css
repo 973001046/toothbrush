@@ -1,0 +1,152 @@
+@charset "utf-8";
+/* 禁用iPhone中Safari的字号自动调整  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 解决IOS默认滑动很卡的情况 */
+  -webkit-overflow-scrolling : touch;
+  font-size: 20px; /* no */
+}
+
+/* 禁止缩放表单 */
+input[type=“submit”], input[type=“reset”], input[type=“button”], input {
+  resize: none;
+  border: none;
+}
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 取消链接高亮 */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* 设置HTML5元素为块 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* /* 图片自适应 / */
+img {
+  width: 100%;
+  height: auto;
+  width: auto\9;
+  display: block;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* /* 初始化 / */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, span, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 12px/1.5 "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+  color: #555;
+  background-color: #fff;
+}
+em, i {
+  font-style: normal;
+}
+ul,li{
+  list-style-type: none;
+}
+strong {
+  font-weight: normal;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+a {
+  text-decoration: none;
+  color: #969696;
+  font-family: tahoma, arial, "PingFang SC", "Microsoft YaHei", Tahoma, Arial, sans-serif, \5b8b\4f53;
+}
+a:hover {
+  text-decoration: none;
+}
+ul, ol {
+  list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-family: tahoma, arial, "PingFang SC", "Microsoft YaHei", Tahoma, Arial, sans-serif, \5b8b\4f53;
+}
+img {
+  border: none;
+}
+input{
+  font-family: tahoma, arial, "PingFang SC", "Microsoft YaHei", Tahoma, Arial, sans-serif, \5b8b\4f53;
+}
+/* /单行溢出/ */
+.one-txt-cut{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*多行溢出 手机端使用*/
+.txt-cut{
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/* 移动端点击a链接出现蓝色背景问题解决 */
+a:link,a:active,a:visited,a:hover {
+  background: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+.fl{ 
+  float: left;
+}
+.fr{ 
+  float: right;
+}
+.dblock { 
+  display: block !important;
+}
+.hide { 
+  display: none;
+}
+.align-center {
+  display:flex;
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+}
+[v-cloak] {
+  display: none;
+}
+.bottom-space {
+  /* padding-bottom: 1.2rem; */
+}
+.swiper-pagination-bullet-active {
+  background-color: #d8a881 !important;
+}
+.pullup-wrapper,.pulldown-wrapper,.after-trigger {
+  font-size: 14px!important;
+}
+.scroll-content {
+  position: relative;
+  z-index: 98;
+  /* padding-bottom: 40px; */
+}
+.pullup-wrapper {
+  position: absolute;
+  bottom: 0;
+}
+.scroll-wrapper {
+  overflow: auto;
+}
+.pullup-wrapper .before-trigger {
+  display: none;
+}
