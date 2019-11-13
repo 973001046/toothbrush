@@ -21,7 +21,13 @@
       <img src="@/assets/imgs/right.png" alt="">
     </div>
 
-    <div class="charts">
+    <div class="week-timer align-center" v-if="tabFlag == 3" @click="selectDate('during')">
+      <img src="@/assets/imgs/left.png" alt="">
+      <div>2019年10月</div>
+      <img src="@/assets/imgs/right.png" alt="">
+    </div>
+
+    <div class="charts" :class="{slideUp: !flag}">
       <div class="timer" v-if="tabFlag == 1">
         <!-- <calendar @dayClick="onChange" /> -->
         <!-- <inlineCalendar  /> -->
@@ -43,6 +49,13 @@
           <v-bar />
           <v-tooltip :show-item-marker="false" />
         </v-chart>
+      </div>
+
+      <div class="shadow align-center" v-if="!flag" @click="flag = !flag">
+        <div>
+          <div class="item"></div>
+          <div class="item"></div>
+        </div>
       </div>
     </div>
 
@@ -175,7 +188,8 @@ export default {
       mode: 'single',
       date: '',
       defaultDate: [],
-      disabledDate: []
+      disabledDate: [],
+      flag: false
     }
   },
   methods: {
@@ -228,8 +242,31 @@ export default {
   margin-left: -3px;
 }
 .charts {
-  width: 100%;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 5px;
   overflow-x: auto;
+  position: relative;
+  &.slideUp {
+    height: 120px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    padding-bottom: 40px;
+  }
+  .shadow {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 120px;
+    background-color: #fff;
+    .item {
+      content: "";
+      height: 3px;
+      width: 30px;
+      background-color: #666;
+      margin: 3px 0;
+    }
+  }
 }
 .tab {
   width: 210px;

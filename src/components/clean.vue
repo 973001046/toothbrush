@@ -9,7 +9,7 @@
       <ul>
         <li>
           <div class="title">时长（3分10秒）</div>
-          <slide @percent='percent'></slide>
+          <slide @percent='percent' :hover='true' :min=2 :max=10></slide>
           <div class="flex">
             <div class="left">2分钟</div>
             <div class="right">10分钟</div>
